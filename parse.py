@@ -35,10 +35,15 @@ def search_ticker(ticker):
 #   'filing_date': '2019-05-15',
 #   'file_number': '028-10098'
 #  }, {...}, ...]
+# If the ticker or CIK was invalid, prints an error message and exits.
 def parse_text(text):
     result = []
     soup = BeautifulSoup(text, 'lxml')
     table = soup.find('div', id='seriesDiv')
+    if not table:
+        print('TickerError: no matching ticker or CIK')
+        sys.exit(1)
+
     tr_tags = table.find_all('tr')[1:] # ignore the first row (table headers)
     for tr in tr_tags:
         for br in tr.find_all('br'):
