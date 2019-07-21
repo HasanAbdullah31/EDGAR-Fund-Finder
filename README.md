@@ -7,10 +7,9 @@
 1. If you haven't done so already, navigate to the directory containing this file in your command prompt.
 2. Now, to install the dependencies, type: `pip3 install -r requirements.txt`
 3. Next, to run the program, type: `python3 main.py`
-4. Enter the ticker or CIK when prompted. Answer the following prompts as well.
-5. Assuming there are no errors (e.g. 404 Not Found), the reports will be written to a .tsv file.
+4. Enter the ticker or CIK when prompted. Answer the following prompt(s) as well.
+5. Assuming there are no errors (e.g. 404 Not Found), the report(s) will be written to a .tsv file.
 
 ##### Notes:
 - Occasionally, the server will take some time to respond to the request; in these cases, the program exits after a few seconds.
-- Inputting filing type is case insensitive. However, spaces matter, so `SC 13` is different from `SC13`.
 - For the (Y/N) inputs, typing anything other than `y` or `yes` (case insensitive) counts as `n` or `no`.
